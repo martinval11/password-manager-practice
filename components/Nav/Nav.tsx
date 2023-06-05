@@ -1,27 +1,12 @@
-import {
-  Box,
-  Toolbar,
-  AppBar,
-  Typography,
-  Button,
-  IconButton,
-} from '@mui/material';
-import MenuIcon from '@mui/icons-material/Menu';
+import { Box, Toolbar, AppBar, Typography, Button } from '@mui/material';
+
+import Link from 'next/link';
 
 const Nav = () => {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
         <Toolbar>
-          <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="open drawer"
-            sx={{ mr: 2 }}
-          >
-            <MenuIcon />
-          </IconButton>
           <Typography
             variant="h6"
             noWrap
@@ -30,8 +15,12 @@ const Nav = () => {
           >
             Password Manager
           </Typography>
-          <Button>Login</Button>
-          <Button>Sign up</Button>
+          <Link href="/login">
+            <Button>Login</Button>
+          </Link>
+          <Link href="/signup">
+            <Button>Sign up</Button>
+          </Link>
         </Toolbar>
       </AppBar>
     </Box>
