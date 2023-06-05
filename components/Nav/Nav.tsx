@@ -13,7 +13,7 @@ const Nav = () => {
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
           >
-            Password Manager
+            <Link href="/">Password Manager</Link>
           </Typography>
           <Link href="/login">
             <Button>Login</Button>

@@ -11,6 +11,8 @@ import {
 import Head from 'next/head';
 import Link from 'next/link';
 
+import Footer from '@/components/Footer/Footer';
+
 const SignUp = () => {
   const theme = createTheme({
     palette: {
@@ -87,9 +89,11 @@ const SignUp = () => {
           </Button>
 
           <small>
-            Do you have an account? <Link href="/login">Login here</Link>
+            Do you have an account? <Link href="/login" id="link">Login here</Link>
           </small>
         </Container>
+
+        <Footer />
       </ThemeProvider>
     </form>
   );
